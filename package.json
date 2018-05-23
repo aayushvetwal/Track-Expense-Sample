@@ -21,6 +21,8 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
+	"babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "css-loader": "^0.28.11",
     "express": "^4.16.3",
     "live-server": "^1.2.0",
@@ -40,12 +42,9 @@
     "uuid": "^3.2.1",
     "validator": "^10.0.0",
     "webpack": "^4.6.0",
-    "webpack-dev-server": "^3.1.4",
     "yarn": "^1.6.0"
   },
   "devDependencies": {
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.3",
@@ -53,6 +52,7 @@
     "jest": "^22.4.3",
     "raf": "^3.4.0",
     "react-test-renderer": "^16.3.2",
-    "webpack-cli": "^2.1.2"
+    "webpack-cli": "^2.1.2",
+	"webpack-dev-server": "^3.1.4"
   }
 }
