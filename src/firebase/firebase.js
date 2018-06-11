@@ -149,9 +149,86 @@ setTimeout(() => {
 }, 10500);
 */
 
+/*
 const onValueChange = database.ref().on('value', (snapshot) => {
 	const val = snapshot.val();
 	console.log(`${val.name} is a ${val.job.title} at ${val.job.company}`);
 }, (e) => {
 	console.log('error fetching data', e);
+}); */
+
+/*
+const notes = [{
+	id: '12',
+	title: 'First Note',
+	body: 'This is my note'
+},{
+	id: '761',
+	title: 'Another note Note',
+	body: 'This is my note'
+}];
+
+database.ref('notes').set(notes); */
+
+/*
+database.ref('notes').push({
+	title: 'React Native, Angular, Python',
+	body: 'Course Topics'
+}); */
+
+/*
+database.ref('notes/-LEkMcrz0ngu6IoM3HAq').update({
+	body: 'Buy Food'
+}); */
+
+/*
+database.ref('notes/-LEkMcrz0ngu6IoM3HAq').remove(); */
+
+/*
+database.ref('expenses').push({
+	description: 'Coffee',
+	note: '',
+	amount: 245,
+	createdAt: 46546646
+}); */
+
+/*
+database.ref('expenses')
+	.once('value')
+	.then((snapshot) => {
+		const expenses = [];
+		snapshot.forEach((childSnapshot) => {
+			expenses.push({
+				id: childSnapshot.key,
+				...childSnapshot.val()
+			});
+		});
+		console.log(expenses);
+	}); */
+
+/*	
+database.ref('expenses').on('value', (snapshot) => {
+	const expenses = [];
+	snapshot.forEach((childSnapshot) => {
+		expenses.push({
+			id: childSnapshot.key,
+			...childSnapshot.val()
+		});
+	});
+	console.log(expenses);
+}); */
+
+//child_removed
+database.ref('expenses').on('child_removed', (snapshot) => {
+	console.log(snapshot.key, snapshot.val());
+});
+
+//child_changed
+database.ref('expenses').on('child_changed', (snapshot) => {
+	console.log(snapshot.key, snapshot.val());
+});
+
+//child_added
+database.ref('expenses').on('child_added', (snapshot) => {
+	console.log(snapshot.key, snapshot.val());
 });
