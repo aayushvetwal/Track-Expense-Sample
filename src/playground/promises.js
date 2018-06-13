@@ -14,6 +14,23 @@ promise.then((data) => {
 }); 
 
 /*
+//Promise Chaining
+promise.then((data) => {
+	console.log(data);
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			resolve('This is other promise');
+		}, 1500);
+	});
+}).then((str) => {	//this then will only run if the promise returned abvove is successful/resolved
+	console.log('does this run with', str);
+}).catch((e) => {
+	console.log('error: ', e);
+});
+*/
+
+
+/*
 promise.then((data) => {
 	console.log(data);
 }, (e) => {

@@ -13,6 +13,8 @@ firebase.initializeApp(config);
 
 const database = firebase.database();
 
+export {firebase, database as default};
+
 /*
 database.ref().set({
 	name: 'Aayush Vetwal',
@@ -218,6 +220,8 @@ database.ref('expenses').on('value', (snapshot) => {
 	console.log(expenses);
 }); */
 
+/*
+
 //child_removed
 database.ref('expenses').on('child_removed', (snapshot) => {
 	console.log(snapshot.key, snapshot.val());
@@ -232,3 +236,5 @@ database.ref('expenses').on('child_changed', (snapshot) => {
 database.ref('expenses').on('child_added', (snapshot) => {
 	console.log(snapshot.key, snapshot.val());
 });
+
+*/
