@@ -1,0 +1,12 @@
+.content-container{
+	margin: 0 auto;
+	padding: 0 $m-size;
+	max-width: 80rem;
+}
+
+.header__content{
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	padding: $s-size 0;
+}
